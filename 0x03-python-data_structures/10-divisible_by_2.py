@@ -8,4 +8,3 @@ def divisible_by_2(my_list=[]):
         else:
             new_l[i] = 0
     return new_l
-
