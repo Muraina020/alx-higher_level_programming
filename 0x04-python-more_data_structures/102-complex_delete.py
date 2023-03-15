@@ -1,10 +1,21 @@
 #!/usr/bin/python3
-def complex_delete(my_dict, value):
-    keys_to_del = []
-    for key in my_dict:
-        if my_dict[key] == value:
-            keys_to_del.append(key)
-    for key in keys_to_del:
-        del my_dict[key]
-    return my_dict
+def roman_to_int(roman_string):
+    if type(roman_string) is not str or roman_string is None:
+        return 0
+    roman_dict = {
+        'I': 1,
+        'V': 5,
+        'X': 10,
+        'L': 50,
+        'C': 100,
+        'D': 500,
+        'M': 1000
+    }
+    decs = [roman_dict[x] for x in roman_string]
+    output = 0
+    for i in range(len(decs)):
+        output += decs[i]
+        if decs[i - 1] < decs[i] and i != 0:
+            output -= (decs[i - 1] + decs[i - 1])
+    return output
 
