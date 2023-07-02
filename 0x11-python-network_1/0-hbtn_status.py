@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This script to get the status of https://alx-intranet.hbtn.io using urllib"""
+"""This script gets the status of https://alx-intranet.hbtn.io using urllib"""
 
 import urllib.request
 
